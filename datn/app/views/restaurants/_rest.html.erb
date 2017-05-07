@@ -1,0 +1,17 @@
+<div class="col-md-4 col-sm-6 mix danhmuc<%= rest.cat_id %>" data-bound="">
+  <div class="portfolio">
+    <div class="single_protfolio">
+      <div class="prot_imag">
+          <%= link_to restaurant_path(rest.id), method: :get do %>
+            <img class="rest_img" src="assets/restaurants/<%= rest.picture %>" />
+          <% end %>
+        <div class="hover_port_text">
+          <h2>
+            <%= link_to rest.name, restaurant_path(rest.id), method: :get %>
+          </h2>
+          <p><%= rest.cat_name %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

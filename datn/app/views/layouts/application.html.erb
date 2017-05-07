@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<!--[if lt IE 7 ]> <html lang="vi" class="ie6">    <![endif]-->
+<!--[if IE 7 ]>    <html lang="vi" class="ie7">    <![endif]-->
+<!--[if IE 8 ]>    <html lang="vi" class="ie8">    <![endif]-->
+<!--[if IE 9 ]>    <html lang="vi" class="ie9">    <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html class="no-js" lang="vi">
+	<head>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<%= favicon_link_tag(source='logo_edu.png', options={}) %>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>VinaEnter Edu</title>
+		<meta name="description" content="VinaEnter Edu">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<!-- google font  -->
+		<link href='https://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+		<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	        <!-- Favicon
+	  ============================================ -->
+	  <!-- Datatable -->
+	  <link rel="stylesheet" href="assets/public/css/jquery.dataTables.min.css">
+
+	  <!-- style CSS
+	  ============================================ -->          
+	  <link rel="stylesheet" href="assets/public/css/agency.min.css">
+	  <link rel="stylesheet" href="assets/public/css/style.css">
+
+	  <!-- JS -->    
+	  <script src="assets/public/js/jquerys.js"></script>
+
+	  <!-- jquery-1.11.3.min js
+	  ============================================ -->         
+	  <!-- <script src="assets/public/js/vendor/jquery-1.11.3.min.js"></script>    -->
+	  <script src="assets/public/js/jquery-1.11.2.min.js"></script>   
+	  <script src="assets/public/js/validate.js"></script>
+	  <script src="assets/public/js/jquery.validate.js"></script>
+
+	  <!-- bootstrap js
+	  ============================================ -->         
+	  <script src="assets/public/js/bootstrap.min.js"></script>      
+
+	  <!-- Datatable -->
+	  <script src="assets/public/js/jquery.dataTables.min.js"></script>
+	  
+	  <script src="assets/public/js/vendor/modernizr-2.8.3.min.js"></script>
+  </head>
+  <body>
+      <!--Start nav  area --> 
+    <div class="nav_area" id="sticker">
+      <div class="container">
+        <div class="row">
+          <!--logo area-->
+          <div class="col-md-3 col-sm-3 col-xs-4">
+              <div class="logo"><a href="/"><img src="/assets/logo_edu.png" alt=""></a></div>
+          </div>
+          <!--end logo area-->
+          <!--nav area-->
+          <div class="col-md-9 col-sm-9 col-xs-8">
+              <!--  nav menu-->
+            <nav class="menu">
+              <ul class="navid">
+                <li class="current"><a href="/#home">Trang chủ</a></li>
+                <li class=""><a href="/#about-me">Giới thiệu</a></li>
+                <li class=""><a href="/#mypost">Bài viết</a></li>
+                <li class=""><a href="/#portfolio">Dự án</a></li>
+                <li class=""><a href="/#contact-me">Liên hệ</a></li>
+                <li><a href="/tim-kiem.html"><i class="fa fa-search"></i></a></li>
+              </ul>
+            </nav>
+              <!--end  nav menu-->                     
+        	</div>
+          <!--end nav area-->
+      	</div>  
+    	</div>
+  	</div>
+    <!--end header  area -->
+  	<%= yield %>
+    <div class="footer_area" id="contact-me">
+      <div class="container">
+        <div class="row">
+          <div class=" col-sm-12 col-md-12 col-lg-12">
+            <div class="footer_text">
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="single_address fix">
+                  <div class="address_icon">
+                    <span><i class="fa fa-map-marker"></i></span>
+                  </div>
+                  <div class="address_text">
+                    <p class="contact_text">
+                      <span>Address: </span>
+                      154 Phạm Như Xương, Liên Chiểu, Đà Nẵng
+                    </p>
+                  </div>
+                </div> 
+                <div class="single_address fix">
+                  <div class="address_icon">
+                    <span><i class="fa fa-phone"></i></span>
+                  </div>
+                  <div class="address_text">
+                    <p class="contact_text">
+                      <span>Phone: </span>
+                      01626757797
+                    </p>
+                  </div>
+                </div>
+              <div class="single_address fix">
+                  <div class="address_icon">
+                    <span><i class="fa fa-envelope-o"></i></span>
+                  </div>
+                  <div class="address_text">
+                    <p class="contact_text">
+                      <span>Email: </span>
+                      tnkttruong@gmail.com
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <div class="single_address fix">
+                  <div class="address_icon">
+                    <span><i class="fa fa-facebook"></i></span>
+                  </div>
+                  <div class="address_text">
+                    <p class="contact_text">
+                      <span>Facebook: </span>
+                      <a href="https://www.facebook.com/tnkt.truong" title="Tnkt Truong">Tnkt Truong</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="single_address fix">
+                  <div class="address_icon">
+                    <span><i class="fa fa-google-plus"></i></span>
+                  </div>
+                  <div class="address_text">
+                    <p class="contact_text">
+                      <span>Google Plus: </span>
+                      <a href="https://plus.google.com/117958802661244590702" title="">Trương Công Trạng</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="single_address fix">
+                  <div class="address_icon">
+                    <span><i class="fa fa-skype"></i></span>
+                  </div>
+                  <div class="address_text">
+                    <p class="contact_text">
+                      <span>Skype: </span>
+                      Trang Truong C.
+                    </p>
+                  </div>
+                </div>              
+              </div>
+              <div class="col-sm-4 col-md-4 col-lg-4">
+                <form id="formlienhe" action="" remote: true method="post" novalidate="novalidate">
+                    <div class="contract_us">
+                        <div class="inputt input_change">
+                            <input type="text" name="hoten" class="form-control" id="name" placeholder="Name">
+                            <span class="message_icon"><i class="fa fa-user"></i></span>
+                        </div>
+                        <div class="inputt input_change">
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Email">
+                            <span class="message_icon"><i class="fa fa-envelope-o"></i></span>
+                        </div>
+                        <div class="inputt input_change">
+                            <input type="text" name="phone" class="form-control" id="phone" placeholder="Phone">
+                            <span class="message_icon"><i class="fa fa-phone"></i></span>
+                        </div>
+                        <div class="inputt">
+                            <textarea class="form-control" name="noidung" rows="4" id="mes" placeholder="Message"></textarea>
+                            <span class="message_icon"><i class="fa fa-external-link"></i></span>
+                        </div>
+                        <div class="sunmite_button">
+                            <div id="success"></div>
+                            <!-- <input type="submit" name="sendcontact" value="Send Messeage" id="submit"  /> -->
+                            <button name="sendcontact" id="submit">Send Message</button>
+                        </div>
+                    </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div class="footer_text">
+        <p>Copyright © 2017 <a href="https://www.facebook.com/vinaenter.edu">AM THUC DA THANH</a>.</p>
+      </div>
+    </div>
+    <script src="assets/public/js/owl.carousel.min.js"></script>
+
+    <!-- plugins js
+    ============================================ -->      
+
+    <script src="assets/public/js/plugins.js"></script>   
+    <!-- counterup js
+    ============================================ -->        
+    <script src="assets/public/js/jquery.counterup.min.js"></script>
+    <script src="assets/public/js/waypoints.min.js"></script>
+    <!-- MixItUp js-->        
+    <script src="assets/public/js/jquery.mixitup.js"></script>
+    <!-- Nivo Slider JS -->
+    <script src="assets/public/js/jquery.nivo.slider.pack.js"></script>       
+    <script src="assets/public/js/jquery.nav.js"></script>           
+    <!-- wow js
+    ============================================ -->       
+    <script src="assets/public/js/wow.js"></script>
+    <!--Activating WOW Animation only for modern browser-->
+    <!--[if !IE]><!-->
+    <script type="text/javascript"> new WOW().init(); </script>
+    <!--<![endif]-->
+    <!-- Add venobox ja -->
+    <script type="text/javascript" src="assets/public/venobox/venobox.min.js"></script>       
+    <!-- main js
+    ============================================ -->           
+    <script src="assets/public/js/main.js"></script>
+    <script src="assets/public/js/jqBootstrapValidation.js"></script>
+  </body>
+</html>

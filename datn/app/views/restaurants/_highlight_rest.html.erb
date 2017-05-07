@@ -1,0 +1,31 @@
+<div id="htmlcaption<%= highlight_rest_counter %>" 
+  class="nivo-html-caption slider-caption-<%= highlight_rest_counter %>">
+  <div class="slider-progress"></div> 
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">           
+        <div class="slide1-text slide-text">
+          <div class="middle-text">
+            <div class="left_sidet1">
+              <div class="cap-title wow slideInRight" data-wow-duration=".9s" data-wow-delay="0s">
+                <h2><%= highlight_rest.name %></h2>
+              </div>
+              <div class="cap-dec wow slideInRight" data-wow-duration="1.1s" data-wow-delay="0s">
+                <h2><%= highlight_rest.description %></h2>
+              </div>  
+              <div class="cap-readmore animated fadeInUpBig" data-wow-duration="1.5s" data-wow-delay=".5s">
+              <%= link_to "Chi tiết", restaurant_path(highlight_rest.id), method: :get %>
+              </div>
+            </div>
+            <div class="right_sidet1">
+              <div class="slide-image1">
+                <img class="wow slideInUp highlight_picture"  data-wow-duration="1.5s" data-wow-delay="0s" 
+                src="assets/restaurants/<%= highlight_rest.picture %>" alt="slider caption" />
+              </div>                  
+            </div>        
+          </div>
+        </div>    
+      </div>
+    </div>
+  </div>          
+</div>
