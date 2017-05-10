@@ -112,3 +112,189 @@ rests = [
 rests.each do |rest|
   Restaurant.create!(rest)
 end
+
+menus = [
+  {
+    name: "Cua gạch hấp",
+    restaurant_id: 15,
+    picture: "cuahap.jpg",
+    cost: 50000
+  },
+  {
+    name: "ghẹ hấp",
+    restaurant_id: 15,
+    picture: "ghenuong.html",
+    cost: 50000
+  },
+  {
+    name: "Hàu nướng mỡ hành",
+    restaurant_id: 15,
+    picture: "gehap.html",
+    cost: 70000
+  },
+  {
+    name: "sườn BBQ",
+    restaurant_id: 16,
+    picture: "BBQ.png",
+    cost: 100000
+  },
+  {
+    name: "cá hồi sốt phomai",
+    restaurant_id: 16,
+    picture: "cahoi.jpg",
+    cost: 150000
+  },
+  {
+    name: "Bánh trán miệng",
+    restaurant_id: 16,
+    picture: "trangmieng.jpg",
+    cost: 70000
+  },
+  {
+    name: "Sò nhúng đá",
+    restaurant_id: 17,
+    picture: "sonhung.png",
+    cost: 150000
+  },
+  {
+    name: "Bò cuộn",
+    restaurant_id: 17,
+    picture: "bocuon.png",
+    cost: 100000
+  },
+  {
+    name: "Sườn sốt chua ngọt",
+    restaurant_id: 17,
+    picture: "suonsot.png",
+    cost: 100000
+  },
+  {
+    name: "Cơm Chiên Trái Dứa",
+    restaurant_id: 18,
+    picture: "comchien.png",
+    cost: 150000
+  },
+  {
+    name: "Thịt heo xông khói",
+    restaurant_id: 18,
+    picture: "heoxongkhoi.png",
+    cost: 100000
+  },
+  {
+    name: "Salad trứng",
+    restaurant_id: 18,
+    picture: "salaxtrung.jpg",
+    cost: 70000
+  },
+  {
+    name: "Mì Quảng Ếch",
+    restaurant_id: 19,
+    picture: "miquangech.jpg",
+    cost: 25000
+  },
+  {
+    name: "Mì Quảng Lươn",
+    restaurant_id: 19,
+    picture: "miquangluon.jpg",
+    cost: 25000
+  },
+  {
+    name: "Mì Quảng Gà",
+    restaurant_id: 19,
+    picture: "miquangga.jpg",
+    cost: 30000
+  },
+  {
+    name: "sá sùng chiên mắm nhỉ",
+    restaurant_id: 20,
+    picture: "sasung.jpg",
+    cost: 70000
+  },
+  {
+    name: "cá Sửu hấp tàu xì",
+    restaurant_id: 20,
+    picture: "casuuhap.jpg",
+    cost: 100000
+  },
+  {
+    name: "Khoai tây chiên",
+    restaurant_id: 20,
+    picture: "khoaitay.jpg",
+    cost: 60000
+  },
+  {
+    name: "Bánh Xèo & Nem Lụi",
+    restaurant_id: 21,
+    picture: "nemlui.jpg",
+    cost: 50000
+  },
+    {
+    name: "Bún thịt nướng",
+    restaurant_id: 21,
+    picture: "bun.jpg",
+    cost: 20000
+  },
+  {
+    name: "Nem Lụi",
+    restaurant_id: 21,
+    picture: "nemlui2.jpg",
+    cost: 35000
+  },
+  {
+    name: "Cá mú sashimi",
+    restaurant_id: 22,
+    picture: "camu.jpg",
+    cost: 50000
+  },
+    {
+    name: "Lẩu Hải Sản",
+    restaurant_id: 22,
+    picture: "lauhaisan.png",
+    cost: 10000
+  },
+  {
+    name: "Mực Một Nắng Nướng Mọi",
+    restaurant_id: 22,
+    picture: "mucnuong.jpg",
+    cost: 100000
+  },
+  {
+    name: "Bún thập cẩm",
+    restaurant_id: 23,
+    picture: "bunthapcam.jpg",
+    cost: 25000
+  },
+    {
+    name: "Bún Chả Cua",
+    restaurant_id: 23,
+    picture: "bunchacuaa.jpg",
+    cost: 25000
+  },
+  {
+    name: "Bún Bò",
+    restaurant_id: 23,
+    picture: "bunbo.jpg",
+    cost: 25000
+  },
+  {
+    name: "Lẩu Bò",
+    restaurant_id: 24,
+    picture: "laubo.jpg",
+    cost: 150000
+  },
+  {
+    name: "Bò nướng",
+    restaurant_id: 24,
+    picture: "bonuong.jpg",
+    cost: 70000
+  },
+  {
+    name: "Bò sốt tiêu",
+    restaurant_id: 24,
+    picture: "bonhungtieu.jpg",
+    cost: 100000
+  }
+]
+menus.each do |menu|
+  Menu.create!(menu)
+end

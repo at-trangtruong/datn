@@ -36,6 +36,7 @@
 html,
 body {
     height: 100%;
+    
 }
 .floatleft {
     float: left
@@ -3408,4 +3409,7 @@ button.close{
 .footer_text{
     background: #808080;
     margin-top: 20px;
+}
+.clear{
+
 }

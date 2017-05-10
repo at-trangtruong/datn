@@ -1,1 +1,106 @@
-asds
+	<!--Chèn comment Facebook-->
+	<style type="text/css" media="screen">
+		body{
+			background: #eeeeee
+		}
+	</style>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.8";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	<!--Chèn comment Facebook-->
+<div style="margin-top: 150px;" class="container">
+	<div class="container-fluid white-bg">
+		<div class="container">
+			<h2 style="text-align: center;">Nhà hàng MasterChef</h2>
+			<div class="modal-body" style="margin-top: 50px;">
+				<div style="float: left; width: 45%; margin-left: -20px;">
+					<img class="img-responsive img-centered" style="width: 400px; height: 300px;"
+					src="/assets/restaurants/<%= @restaurant.picture %>">
+				</div>
+				<div style="margin-left: 70px; float: left; width: 45%;">
+					<p><%= @restaurant.description %></p>
+					<p>
+						<strong>Địa chỉ: </strong>
+						<span><%= @restaurant.address %> -</span>
+						<span> <%= @restaurant.district_name %></span>
+					</p>
+					<div id="rateit_star1" data-rateit-value="3.6" data-productid="19-0" class="rateit">
+					</div>
+					<label style="margin-left:15px;">Ðánh giá: 3.6</label><br>
+					<div id="ajaxrs"></div>
+					<div style="clear: both;"></div>
+				</div>
+			</div>
+			<div class="clear"> </div>
+				<div class="" style="margin-top: 50px;">
+					<h2 class="text-uppercase margin-bottom-10 text-center"><span style="margin-left: 80px;">MENU</span></h2>
+					<section style="padding: 0px 50px;" id="">
+						<div class="container">
+							<div class="row">
+								<table width=85%; id="myTable" class="table-hover table-striped" style="text-align: center;">
+									<thead>
+										<tr>
+											<th width="30%" ; style="text-align: center;">Hình ảnh</th>
+											<th width="30%" style="text-align: center;">Tên món ăn</th>
+											<th width="20%" style="text-align: center;">Giá</th>
+										</tr>
+									</thead>
+									<tbody>
+										<%= render partial: 'menu', collection: @restaurant.menus %> 
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+	<div class="fb-comments" data-href="http://localhost:8080/DACSHTTT/chi-tiet?idrest=21" data-numposts="5"
+	 style = "margin-left: 20px;">
+	</div>
+</div>
+<div id="myModal" class="modal fade" role="dialog" style="margin-top: 80px;">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title" id="menu_name"></h4>
+      </div>
+      <div class="modal-body" id="menu_picture">
+       
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+	function GetCost(cost) {
+		var gia = $("input#cost" + cost).val();
+		var number = $("input#number" + cost).val();
+		//var number = window.document.goimon.cost.value;
+		//var gia = window.document.goimon.cost.value;
+
+		document.getElementById('sum' + cost).value = (gia * number)
+	}
+</script>
+<script type="text/javascript">
+	$(function() {
+		//popover normal
+		$('.btn-open-popover').popover({
+			trigger : 'hover',
+		});
+	});
+	$(".menu_img").click(function(){
+		console.log($("#menu_name").attr("class"))
+		$("#myModal").modal('show');
+		
+	});
+</script>
