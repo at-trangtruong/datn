@@ -1,0 +1,24 @@
+<section style="padding: 50px 50px;" id="">
+<div class="container" style="margin-top: 120px;">
+ <%= render partial: 'shared/show_messages', locals: {flash: flash} %>
+ <div style="float: right;">
+  <%= link_to "Thêm Menu", new_menu_path, class: "btn btn-primary",style: "font-size: 13px;margin-left: 0px;margin-right: 10px;" %>
+</div>
+  <h2 style="text-align: center;">Menu</h2>
+  <div class="row">
+    <table width=100%; id="myTable" class="table-hover table-striped" style="text-align: center;">
+      <thead>
+        <tr>
+          <th width="30%" ; style="text-align: center;">Hình ảnh</th>
+          <th width="30%" style="text-align: center;">Tên món ăn</th>
+          <th width="20%" style="text-align: center;">Giá</th>
+          <th width="20%" style="text-align: center;">Chức năng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: 'menu_ad', collection: @restaurant.menus %>
+      </tbody>
+    </table>
+  </div>
+</div>
+</section>

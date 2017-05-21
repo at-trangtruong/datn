@@ -1,0 +1,10 @@
+<tr>
+  <td class="align-center id-cat"><%= cat_counter %></td>
+  <td class="tencm">
+    <%= link_to cat.name, edit_admin_category_path(cat.id)%>
+  </td>
+  <td align="center" width="30%">
+    <%= link_to "Sửa", edit_admin_category_path(cat.id)%>
+    <%= link_to "Xóa", admin_category_path(cat.id), method: :delete, data: {confirm: "Are you sure ?"} %>
+  </td>
+</tr>

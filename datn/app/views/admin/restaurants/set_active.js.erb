@@ -1,0 +1,7 @@
+<% if @restaurant.status == 1 %>
+var a = "<img src='/assets/tick-circle.gif' alt='<%=@restaurant.id %>-0'/>"
+<% else %>
+var a = "<img src='/assets/minus-circle.gif' alt='<%=@restaurant.id %>-1' />"
+<% end %>
+$("#setactive-<%= @restaurant.id %>").empty();
+$("#setactive-<%= @restaurant.id %>").append(a);

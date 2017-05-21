@@ -1,0 +1,70 @@
+<div class="templatemo-content-container">
+  <div class="templatemo-content-widget white-bg">
+    <div style="width: 80%;margin-left: 150px;margin-top: 150px;" class="module-body">
+      <h2 class="margin-bottom-10" style="text-align: center;">THÊM NHÀ HÀNG</h2>
+      <%= form_for @restaurant, url: restaurants_path,method: :post, multipart: true do |f|%>
+        <div class="row form-group">
+          <div style="margin-bottom: 10px;" class="">
+            <label for="inputFirstName">Tên địa điểm</label>
+            <input type="text" class="form-control" id="inputFirstName" required="required" name="restaurant[name]" value="">
+          </div>
+          <div class=" form-group">
+            <label class="control-label templatemo-block">Danh mục địa điểm</label>
+            <select style="width: 30%;" name="restaurant[category_id]" class="form-control" required="required">
+              <option value="">Chọn nhà hàng</option>
+              <% @categories.each do |cat| %>
+              <option  value="<%= cat.id %>"><%= cat.name %></option>
+              <% end %>
+            </select>
+          </div>
+             <div class=" form-group">
+            <label class="control-label templatemo-block">Danh mục địa điểm</label>
+            <select style="width: 30%;" name="restaurant[district_id]" class="form-control" required="required">
+              <option value="">Chọn quận</option>
+              <% @districts.each do |district| %>
+                <option  value="<%= district.id %>"><%= district.name %></option>
+              <% end %>
+            </select>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <div style="margin-bottom: 10px;"  class="">
+            <label for="inputFirstName">Địa chỉ</label>
+            <input required="required" type="text" class="form-control" id="inputFirstName" placeholder=""
+            name="restaurant[address]" value="">
+          </div>
+          <div class="">
+            <label for="inputFirstName">Hotline</label>
+            <input required="required" type="text" class="form-control" id="inputFirstName" placeholder=""
+            name="restaurant[hotline]" value="">
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="">
+            <label class="control-label templatemo-block">Hình ảnh</label>
+            <%= f.file_field :picture, class: "file" %>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="">
+            <label class="control-label">Mô tả (*)</label>
+            <textarea required="required" class="form-control" name="restaurant[description]" rows="2"></textarea>
+          </div>
+        </div>
+
+        <div class="row form-group">
+          <div class="">
+            <label class="control-label">Chi tiết (*)</label>
+            <textarea required="required" class="form-control" name="restaurant[detail]" rows="3"></textarea>
+          </div>
+        </div>
+        <div class="form-group text-right">
+          <!-- <button type="submit" class="templatemo-blue-button" name="submit">Thêm</button> -->
+          <input type="submit" class="btn btn-primary" name="submit" value="Thêm">
+          <input type="reset" class="btn btn-primary" name="reset" value="Nhập lại">
+          <!-- <button type="reset" class="templatemo-white-button">Nh?p l?i</button> -->
+        </div>
+      <% end %>
+    </div> <!-- End .module-body -->
+  </div>

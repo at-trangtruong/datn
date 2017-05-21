@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	$("#frmform").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
 			"tentin": {
@@ -12,11 +12,11 @@ $(document).ready(function() {
 			"mota": {
 				required: true,
 			},
-			"cktext":{ 
-				required: function() 
+			"cktext":{
+				required: function()
 				{
-					CKEDITOR.instances.cktext.updateElement(); 
-				}, 
+					CKEDITOR.instances.cktext.updateElement();
+				},
 				minlength:1,
 			}
 		},
@@ -30,18 +30,18 @@ $(document).ready(function() {
 			"mota": {
 				required: "Vui lòng nhập Mô tả",
 			},
-			"cktext":{ 
-				required:"Vui lòng nhập vào khung này", 
+			"cktext":{
+				required:"Vui lòng nhập vào khung này",
 				minlength:"Bạn không được để trống khung này",
-			} 
+			}
 		}
 	});
 
-});	
+});
 
 $(document).ready(function() {
 	$("#addCat").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
 			"ten": {
@@ -54,52 +54,51 @@ $(document).ready(function() {
 			}
 		}
 	});
-});	
+});
 
 $(document).ready(function() {
-	$("#addUser").validate({
-		ignore: [], 
+	$("#new_user").validate({
 		debug: false,
 		rules: {
-			"username": {
-				required: true,
-				minlength: 5,
-			},
-			"password": {
+			"user[username]": {
 				required: true,
 				minlength: 6,
 			},
-			"re_password": {
+			"user[password]": {
+				required: true,
+				minlength: 6,
+			},
+			"user[re_password]": {
 				required: true,
 				equalTo: "#password",
 			},
-			"fullname": {
+			"user[fullname]": {
 				required: true,
 			},
 		},
 		messages: {
-			"username": {
-				required: "Vui lòng nhập vào đây",
-				minlength: "Phải có ít nhất 5 ký tự",
-			},
-			"password": {
+			"user[username]": {
 				required: "Vui lòng nhập vào đây",
 				minlength: "Phải có ít nhất 6 ký tự",
 			},
-			"re_password": {
+			"user[password]": {
+				required: "Vui lòng nhập vào đây",
+				minlength: "Phải có ít nhất 6 ký tự",
+			},
+			"user[re_password]": {
 				required: "Vui lòng nhập vào đây",
 				equalTo: "Phải trùng khớp với mật khẩu ở trên",
 			},
-			"fullname": {
+			"user[fullname]": {
 				required: "Vui lòng nhập vào đây",
 			},
 		}
 	});
-});	
+});
 
 $(document).ready(function() {
 	$("#editUser").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
 			"username": {
@@ -132,11 +131,11 @@ $(document).ready(function() {
 			},
 		}
 	});
-});	
+});
 
 $(document).ready(function() {
 	$("#formdanhngon").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
 			"noidung": {
@@ -159,11 +158,11 @@ $(document).ready(function() {
 			},
 		}
 	});
-});	
+});
 
 $(document).ready(function() {
 	$("#formduan").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
 			"ten": {
@@ -194,11 +193,11 @@ $(document).ready(function() {
 			},
 		}
 	});
-});	
+});
 
 $(document).ready(function() {
 	$("#formaboutme").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
 			"ten": {
@@ -221,11 +220,11 @@ $(document).ready(function() {
 			},
 		}
 	});
-});	
+});
 
 $(document).ready(function() {
 	$("#formquangcao").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
 			"quangcao": {
@@ -248,11 +247,11 @@ $(document).ready(function() {
 			},
 		}
 	});
-});	
+});
 
 $(document).ready(function() {
 	$("#formslider").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
 			"slider": {
@@ -283,4 +282,4 @@ $(document).ready(function() {
 			},
 		}
 	});
-});	
+});

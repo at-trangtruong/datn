@@ -1,4 +1,7 @@
 class Restaurant < ApplicationRecord
+
+  mount_uploader :picture, PictureUploader
+
   belongs_to :category
   belongs_to :user
   belongs_to :district
@@ -7,7 +10,7 @@ class Restaurant < ApplicationRecord
   delegate :name, :id, to: :category, prefix: :cat
   delegate :name, :id, to: :district, prefix: :district
 
-  scope :highlight_rests, -> { 
-    where(status: 1, highlight: 1) 
+  scope :highlight_rests, -> {
+    where(status: 1, highlight: 1)
   }
 end

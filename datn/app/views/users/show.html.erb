@@ -1,0 +1,37 @@
+<div style="width: 80%;padding: 50px;margin-top: 150px;    margin-left: 200px;"class="">
+  <h3 style="margin-left: -17px;color: #b99ddd;float: left;">Thông tin cá nhân</h3>
+  <div style="float: right;">
+    <%= link_to "Địa điểm", restaurants_user_path(@current_user.id), class: "btn btn-primary",style: "font-size: 13px;margin-left: 0px;margin-right: 10px;" %>
+    <%= link_to "Đăng xuất", logout_users_path, class: "btn btn-primary",style: "font-size: 13px;margin-left: 0px;margin-right: 10px;" %>
+  </div>
+  <div style="clear: both;"></div>
+  <%= render partial: 'shared/show_messages', locals: {flash: flash} %>
+  <%= form_for @user,url: user_path, method: :put, multipart: true do |f| %>
+    <div  class="row form-group">
+      <label style="" class="control-label">Tên dang nhập(*)</label><br>
+      <label class="control-label" style="color: red;" ><%= @current_user.username %></label>
+    </div>
+    <div class="row form-group">
+      <label class="control-label">Tên đầy đủ(*)</label>
+      <input type="text" class="form-control" name="user[fullname]" required="true"
+      value="<%= @current_user.fullname %>">
+    </div>
+    <div class="row form-group">
+        <label class="control-label">Avatar</label>
+        <%= f.file_field :avatar %>
+    </div>
+    <div  class="row form-group">
+      <label class="control-label">Mật khẩu(*)</label>
+        <input type="password" class="form-control" name="user[password]" value="" id="password" placeholder="******">
+      </div>
+      <div class="row form-group">
+        <label class="control-label">Nhập lại mật khẩu*)</label>
+        <input type="password" class="form-control" name="user[re_password]" value="" placeholder="******">
+      </div>
+
+    <div class="form-group text-right">
+      <input type="submit" class="btn btn-primary" name="submit" value="Sửa">
+      <input type="reset" class="btn btn-primary" name="reset" value="Nhập lại">
+    </div>
+  <% end %>
+</div>

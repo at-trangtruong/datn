@@ -1,0 +1,23 @@
+ $(function () {
+   $('#rateit_star1').rateit({min: 0, max: 5, step: 1});
+   $('#rateit_star1').bind('rated', function (e) {
+     var ri = $(this);
+     var value = ri.rateit('value');
+     var productID = ri.data('productid');
+     ri.rateit('readonly', true);
+     $.ajax({
+      url: '<%= rates_path %>',
+      type : 'POST',
+      cache : false,
+      data : {
+        restaurant_id : productID,
+        rate : value
+      },
+      error : function() {
+        alert('Có lỗi xảy ra');
+      }
+    });
+
+         //không cho phép đánh giá,sau khi đã đánh giá xong
+       });
+ });

@@ -1,7 +1,8 @@
 <tr>
 	<td>
 		<img class="img-responsive img-centered menu_img" style="width: 60px; height: 60px;"
-		src="/assets/menus/<%= menu.picture %>" alt="<%= menu.name %>" id="<%= menu.cost %>">
+		src="<%= menu.picture %>" alt="<%= menu.name %>" id="<%= menu.cost %>"
+		data-toggle="modal", data-target= "#modal" data-whatever="{name: '<%= menu.name %>', cost: '<%= menu.cost %>', picture: '<%= menu.picture %>'}">
 	</td>
 	<td class="menu_name"><%= menu.name %></td>
 	<td class="menu_cost"><%= menu.cost %></td>

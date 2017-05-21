@@ -1,13 +1,101 @@
 <!-- HOME SLIDER -->
 <div class="slider-wrap home-1-slider" id="home">
 	<div id="mainSlider" class="nivoSlider slider-image">
-		<%= render partial: 'main_slider', collection: @highlight_rests %> 
+		<%= render partial: 'main_slider', collection: @highlight_rests %>
 	</div>
-	<%= render partial: 'highlight_rest', collection: @highlight_rests %> 
+	<%= render partial: 'highlight_rest', collection: @highlight_rests %>
 </div>
 <!-- HOME SLIDER -->
 
-<section id="portfolio">
+<div class="search" style="margin-top: 50px;">
+	<form action="index_submit" method="get" accept-charset="utf-8">
+		<div class="row" style="padding-left: 110px;">
+			<div class="col-sm-2">
+				<div>
+					<label for="">Quận</label>
+				</div>
+				<div class="form-group">
+					<select name="distric" class="form-control">
+            <option value="">---</option>
+            <option value="CamLe">Cẩm Lệ</option>
+            <option value="HaiChau">Hải Châu</option>
+            <option value="HoaVang">Hòa Vang</option>
+            <option value="LienChieu">Liên Chiểu</option>
+            <option value="NguHanhSon">Ngủ Hành Sơn</option>
+            <option value="SonTra">Sơn Trà</option>
+            <option value="ThanhKhe">Thanh Khê</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div>
+          <label for="">Loại nhà hàng</label>
+        </div>
+        <div class="form-group">
+          <select name="type" class="form-control">
+            <option value="">---</option>
+            <option value="BinhDan">Bình dân</option>
+            <option value="SangTrong">Sang trọng</option>
+            <option value="CaoCap">Cao cấp</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div>
+         <label for="">Ẩm thực</label>
+       </div>
+       <div class="form-group">
+         <select name="regions" class="form-control">
+          <option value="">---</option>
+          <option value="MienBac">Miền Bắc</option>
+          <option value="MienNam">Miền Nam</option>
+          <option value="MienTrung">Miền Trung</option>
+          <option value="ChauAu">Châu Âu</option>
+          <option value="ChauA">Châu Á</option>
+          <option value="ChauMy">Châu Mỹ</option>
+        </select>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div>
+       <label for="">Quy mô</label>
+     </div>
+     <div class="form-group">
+       <select name="size" class="form-control">
+        <option value="">---</option>
+        <option value="1-3">1-3 Người</option>
+        <option value="4-6">4-6 Người</option>
+        <option value="7-10">7-10 Người</option>
+        <option value="10-20">10-20 Người</option>
+        <option value="20">>20 Người</option>
+      </select>
+    </div>
+  </div>
+  <div class="col-sm-2">
+    <div>
+     <label for="">Bữa</label>
+   </div>
+   <div class="form-group">
+     <select name="meals" class="form-control">
+      <option value="">---</option>
+      <option value="BuaSang">Bữa sáng</option>
+      <option value="BuaTrua">Bữa trưa</option>
+      <option value="BuaToi">Bữa tối</option>
+      <option value="AnVat">Ăn vặt</option>
+      <option value="AnKhuya">Ăn khuya</option>
+    </select>
+  </div>
+</div>
+<div class="col-sm-1" style="padding-top: 25px;">
+ <button type="submit" class="btn btn-primary">
+   <i class="fa fa-search"></i>
+ </button>
+</div>
+</div>
+</form>
+</div>
+
+<section id="recommended">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-12 text-center">
@@ -15,75 +103,32 @@
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="" title="" >
-					<img style="" src="<%= %>" 
-					class="img-responsive recommended_img" alt="<%=%>">
-				</a>
-				<div class="portfolio-caption">
-					<h4>
-						<a href="<%= %>" title="" ></a>
-					</h4>
-					<p class="text-muted"></p>
-					<div class="rateit" data-rateit-value="" data-rateit-ispreset="true" data-rateit-readonly="true">
-					</div><label style="margin-left:15px;">Đánh giá: <% %></label>
-				</div>
-			</div>
-
-				<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="" title="" >
-					<img style="" src="<%= %>" 
-					class="img-responsive recommended_img" alt="<%=%>">
-				</a>
-				<div class="portfolio-caption">
-					<h4>
-						<a href="<%= %>" title="" ></a>
-					</h4>
-					<p class="text-muted"></p>
-					<div class="rateit" data-rateit-value="" data-rateit-ispreset="true" data-rateit-readonly="true">
-					</div><label style="margin-left:15px;">Đánh giá: <% %></label>
-				</div>
-			</div>
-
-				<div class="col-md-4 col-sm-6 portfolio-item">
-				<a href="" title="" >
-					<img style="" src="<%= %>" 
-					class="img-responsive recommended_img" alt="<%=%>">
-				</a>
-				<div class="portfolio-caption">
-					<h4>
-						<a href="<%= %>" title="" ></a>
-					</h4>
-					<p class="text-muted"></p>
-					<div class="rateit" data-rateit-value="" data-rateit-ispreset="true" data-rateit-readonly="true">
-					</div><label style="margin-left:15px;">Đánh giá: <% %></label>
-				</div>
-			</div>
-		</div>
-	</div>
+    <%= render partial: 'recommended', collection: @recommendes %>
+    </div>
+  </div>
 </section>
 
-<div class="portfolio_area" id="mypost">
+<div class="portfolio_area" id="place">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
-          <h2 class="section-heading">Bài viết</h2>                
+        <h2 class="section-heading">Địa điểm ẩm thực</h2>
       </div>
-    </div>          
+    </div>
     <div class="row">
       <div class="col-md-12">
         <div class="portfolio_nav">
           <ul>
             <li class="filter" data-filter="all">Tất cả</li>
-            <%= render partial: 'category', collection: @categories %> 
+            <%= render partial: 'category', collection: @categories %>
           </ul>
         </div>
       </div>
       <div class="project_maxitup" id="MixItUp380DA8">
-    		<%= render partial: 'rest', collection: @restaurants %>
+        <%= render partial: 'rest', collection: @restaurants %>
       </div>
     </div>
     <%= will_paginate @restaurants %>
-  </div>  
+  </div>
 </div>
 <!--end portfolio area -->

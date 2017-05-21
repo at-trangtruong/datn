@@ -1,0 +1,8 @@
+$('#modal').on('show.bs.modal', function getvalue (event) {
+	var img = $(event.relatedTarget);
+	var recipient = img.data('whatever');
+	var data = eval('(' + recipient + ')');
+	$(this).find("#menu_name").html(data.name + "<br>" + "<span>" + "Giá: " + data.cost + "</span>");
+	$(this).find("#menu_picture").html("<img src=" + data.picture + " alt='' class='show_menu_img'>");
+	console.log()
+});

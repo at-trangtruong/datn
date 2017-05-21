@@ -1,0 +1,12 @@
+<tr>
+  <td>
+    <img class="img-responsive img-centered menu_img" style="width: 60px; height: 60px;"
+    src="<%= menu_ad.picture %>" alt="<%= menu_ad.name %>" >
+  </td>
+  <td class="menu_name"><%= menu_ad.name %></td>
+  <td class="menu_cost"><%= menu_ad.cost %></td>
+  <td>
+    <%= link_to "Sửa", edit_menu_path(menu_ad.id)%>/
+    <%= link_to "Xóa", menu_ad, method: :delete, data: {confirm: "Are you sure ?"} %>
+  </td>
+</tr>

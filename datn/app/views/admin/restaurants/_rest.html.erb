@@ -1,0 +1,27 @@
+<tr>
+  <td><%= rest_counter %></td>
+  <td><%= rest.name %></td>
+  <td><%= rest.category.name %></td>
+  <td> <%= rest.user.username %></td>
+  <td><%= rest.address %></td>
+  <td><%= rest.hotline %></td>
+  <td class="edit_active text-center" id="setactive-<%= rest.id %>">
+    <% if rest.status == 1 %>
+      <img src="/assets/tick-circle.gif" alt="<%= rest.id %>-0" />
+    <% else %>
+      <img src="/assets/minus-circle.gif" alt="<%= rest.id %>-1" />
+    <% end %>
+  </td>
+  <td class="edit_highlight text-center" id="setFeatured-<%= rest.id %>">
+  <% if rest.highlight == 1 %>
+      <img src="/assets/tick-circle.gif" alt="<%= rest.id %>-0" />
+    <% else %>
+      <img src="/assets/minus-circle.gif" alt="<%= rest.id %>-1" />
+    <% end %>
+  </td>
+  <td align="center">
+    <%= link_to "Sửa", edit_admin_restaurant_path(rest.id), method: :get %>
+    <%= link_to "Xóa", admin_restaurant_path(rest.id) , method: :delete, data: {confirm: "Are you sure ?"} %>
+  </td>
+
+</tr>

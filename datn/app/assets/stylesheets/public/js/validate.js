@@ -1,9 +1,9 @@
 $(document).ready(function() {
 	$("#formlienhe").validate({
-		ignore: [], 
+		ignore: [],
 		debug: false,
 		rules: {
-			hoten: {
+			name: {
 				required: true,
 				minlength: 6,
 				maxlength: 32,
@@ -18,13 +18,13 @@ $(document).ready(function() {
 				number: true,
 				minlength: 10,
 			},
-			noidung: {
+			content: {
 				required: true,
 				minlength: 6,
 			}
 		},
 		messages: {
-			hoten: {
+			name: {
 				required: "Vui lòng nhập vào đây",
 				minlength: "Tối thiểu là 6 ký tự",
 				maxlength: "Tối đa 32 ký tự",
@@ -39,7 +39,7 @@ $(document).ready(function() {
 				number: "Vui lòng nhập số",
 				minlength: "Tối thiểu là 10 chữ số",
 			},
-			noidung: {
+			content: {
 				required: "Vui lòng nhập vào đây",
 				minlength: "Tối thiểu là 6 ký tự",
 			}

@@ -1,0 +1,26 @@
+<tr>
+  <td><%= rest.name %></td>
+  <td><%= rest.category.name %></td>
+  <td><%= rest.address %></td>
+  <td>
+    <% if rest.status == "1" %>
+      <img src="/assets/tick-circle.gif" alt="" />
+    <% else %>
+      <img src="/assets/minus-circle.gif" alt="" />
+    <% end %>
+  </td>
+  <td>
+    <% if rest.highlight == "1" %>
+      <img src="/assets/tick-circle.gif" alt="" />
+    <% else %>
+      <img src="/assets/minus-circle.gif" alt="" />
+    <% end %>
+  </td>
+  <td>
+    <%= link_to "Menu", menu_restaurant_path(rest.id) %>
+  </td>
+  <td>
+    <%= link_to "Sửa",edit_restaurant_path(rest.id), method: :get %>/
+    <%= link_to "Xóa", rest, method: :delete, data: {confirm: "Are you sure ?"} %>
+  </td>
+</tr>

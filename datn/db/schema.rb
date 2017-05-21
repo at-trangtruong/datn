@@ -10,13 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170508034120) do
+ActiveRecord::Schema.define(version: 20170521032121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "phone"
+    t.text     "content"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -50,14 +59,14 @@ ActiveRecord::Schema.define(version: 20170508034120) do
     t.string   "picture",       default: "default.png"
     t.string   "detail"
     t.string   "hotline"
-    t.string   "status"
-    t.string   "highlight",     default: "0"
     t.integer  "category_id"
     t.integer  "user_id"
     t.datetime "created_at",                            null: false
     t.datetime "updated_at",                            null: false
     t.integer  "district_id"
     t.float    "averaged_rate", default: 0.0
+    t.integer  "status",        default: 0
+    t.integer  "highlight",     default: 0
     t.index ["category_id"], name: "index_restaurants_on_category_id", using: :btree
     t.index ["district_id"], name: "index_restaurants_on_district_id", using: :btree
     t.index ["user_id"], name: "index_restaurants_on_user_id", using: :btree
@@ -68,7 +77,7 @@ ActiveRecord::Schema.define(version: 20170508034120) do
     t.string   "password"
     t.string   "fullname"
     t.string   "avatar",     default: "default.png"
-    t.integer  "role"
+    t.integer  "role",       default: 0
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
   end

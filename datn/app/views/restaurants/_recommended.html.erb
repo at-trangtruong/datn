@@ -1,0 +1,17 @@
+<div class="col-md-4 col-sm-6 portfolio-item">
+  <%= link_to recommended do %>
+  <img style="" src="<%= recommended.picture %>"
+    class="img-responsive recommended_img" alt="<%=%>">
+  <% end %>
+  <div class="portfolio-caption">
+    <h4 style="padding-top: 15px;text-align: center;">
+      <%= link_to recommended.name, recommended %>
+    </h4>
+    <p class="text-muted">
+      <%= recommended.description %>
+      <%= link_to "...", recommended %>
+    </p>
+    <div id="rateit_star1" data-rateit-value="<%= recommended.averaged_rate %>" style="margin-left: 65px;" class="rateit" data-rateit-readonly="true"></div>
+    <label style="margin-left:15px;">Đánh giá: <%= recommended.averaged_rate %> </label>
+  </div>
+</div>

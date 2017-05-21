@@ -1,0 +1,38 @@
+<div class="templatemo-content-widget white-bg">
+
+  <div class="bottom-spacing">
+    <!-- Button -->
+    <div class="float-left">
+      <%= link_to "Thêm danh mục", new_admin_category_path, class: "templatemo-white-button" %>
+    </div>
+    <div class="clear">
+    </div>
+  </div>
+
+  <h2 class="text-uppercase margin-bottom-10 text-center">Danh mục</h2>
+  <div class="table-responsive">
+    <table id="myTable" class="table-hover table-bordered table-striped">
+      <thead>
+        <tr>
+          <th style="width:4%; text-align: center;">#</th>
+          <th>Tên danh mục</th>
+          <th style="width:11%; text-align: center;">Chức năng</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render partial: 'cat', collection: @categories %>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function confirmAction() {
+    return confirm("Xóa chuyên m?c này là xóa luôn các bài vi?t thu?c chuyên m?c này, b?n ch?c xóa ch??")
+  }
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#myTable').DataTable();
+  });
+</script>

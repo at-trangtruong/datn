@@ -6,9 +6,9 @@
     Author: BootExperts
     Author URI: http://bootexperts.com
     Version: 1.0
-  
------------------------------------------------------------------------------------ 
-    
+
+-----------------------------------------------------------------------------------
+
     CSS INDEX
     ===================
     1. Theme Default CSS (body, link color, section etc)
@@ -27,7 +27,7 @@
 	14.single blog css
 	15.home-2 css
 	16.home-3 css
-	17.home-4 css 
+	17.home-4 css
 -----------------------------------------------------------------------------------*/
 /*----------------------------------------*/
 /*  1.  Theme default CSS
@@ -36,7 +36,7 @@
 html,
 body {
     height: 100%;
-    
+
 }
 .floatleft {
     float: left
@@ -1344,7 +1344,6 @@ footer area css
     text-align: center;
 }
 .footer_text p {
-    color: #ddd;
     margin: 0;
     padding: 15px 0;
     text-transform: uppercase;
@@ -3392,8 +3391,8 @@ button.close{
     height: 300px;
 }
 .recommended_img{
-    width:300px; 
-    height: 200px; 
+    width:300px;
+    height: 200px;
     margin-left: 25px;
 }
 .rest_img{
@@ -3412,4 +3411,22 @@ button.close{
 }
 .clear{
 
+}
+.show_menu_img{
+  width: 300px;
+  height: 250px;
+  margin-left: 70px;
+}
+body{
+  background: #eeeeee
+}
+.text-muted{
+  overflow: auto;
+  max-height: 6em;
+  line-height: 1.5em;
+}
+.avatar{
+  width: 30px;
+  border-radius: 30px;
+  height: 30px;
 }
