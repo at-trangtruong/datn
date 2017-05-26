@@ -1,0 +1,68 @@
+<div class="container" style="width: 80%;margin-top: 40px;">
+<%= form_for @restaurant, url: admin_restaurant_path,method: :put, multipart: true do |f|%>
+  <div class="row form-group">
+    <div style="margin-bottom: 10px;" class="">
+      <label for="inputFirstName">Tên địa điểm</label>
+      <input type="text" class="form-control" id="inputFirstName" required="required" name="restaurant[name]" value="<%= @restaurant.name %>">
+    </div>
+    <div class=" form-group">
+      <label class="control-label templatemo-block">Danh mục địa điểm</label>
+      <select style="width: 30%;" name="restaurant[category_id]" class="form-control" required="required">
+        <option value="">Chọn nhà hàng</option>
+        <% @categories.each do |cat| %>
+        <option  value="<%= cat.id %>"><%= cat.name %></option>
+        <% end %>
+      </select>
+    </div>
+    <div class=" form-group">
+      <label class="control-label templatemo-block">Danh mục địa điểm</label>
+      <select style="width: 30%;" name="restaurant[district_id]" class="form-control" required="required">
+        <option value="">Chọn quận</option>
+        <% @districts.each do |district| %>
+        <option  value="<%= district.id %>"><%= district.name %></option>
+        <% end %>
+      </select>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div style="margin-bottom: 10px;"  class="">
+      <label for="inputFirstName">Địa chỉ</label>
+      <input required="required" type="text" class="form-control" id="inputFirstName" placeholder=""
+      name="restaurant[address]" value="<%= @restaurant.address %>">
+    </div>
+    <div class="">
+      <label for="inputFirstName">Hotline</label>
+      <input required="required" type="text" class="form-control" id="inputFirstName" placeholder=""
+      name="restaurant[hotline]" value="<%= @restaurant.hotline %>">
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="">
+      <label class="control-label templatemo-block">Hình ảnh</label>
+      <%= f.file_field :picture, class: "file" %>
+    </div>
+  </div>
+  <div class="row form-group">
+    <div class="">
+      <label class="control-label">Mô tả (*)</label>
+      <textarea required="required" class="form-control" name="restaurant[description]" rows="2">
+        <%= @restaurant.description %>
+      </textarea>
+    </div>
+  </div>
+
+  <div class="row form-group">
+    <div class="">
+      <label class="control-label">Chi tiết (*)</label>
+      <textarea required="required" class="form-control" name="restaurant[detail]" rows="3">
+        <%= @restaurant.detail %>
+      </textarea>
+    </div>
+  </div>
+  <div class="form-group text-right">
+    <input type="submit" class="btn btn-primary" name="submit" value="Sửa">
+    <input type="reset" class="btn btn-primary" name="reset" value="Nhập lại">
+  </div>
+  <% end %>
+</div>

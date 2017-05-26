@@ -1,0 +1,33 @@
+<div class="templatemo-content-container" style="padding: 10px;" >
+  <div class="templatemo-content-widget white-bg" style="padding: 10px;">
+    <div class="bottom-spacing">
+      <!-- Button -->
+      <div class="clear"></div>
+    </div>
+    <div class="float-left">
+      <%= link_to "Thêm người dùng", new_admin_user_path, class: "templatemo-white-button" %>
+    </div>
+    <h2 class="text-uppercase margin-bottom-10 text-center">Người dùng</h2>
+    <div class="table-responsive">
+    <%= render partial: 'shared/show_messages', locals: {flash: flash} %>
+      <table id="myTable" class="table-hover table-bordered table-striped" style="text-align: center; width: 90%;">
+        <thead>
+          <tr class="text-center">
+            <th width="5%">#</th>
+            <th width="25%">Username</th>
+            <th width="25%">Fullname</th>
+            <th width="25%">Avatar</th>
+            <th width="10%">Chức năng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: 'user', collection: @users %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#myTable').DataTable();
+    });
+  </script>

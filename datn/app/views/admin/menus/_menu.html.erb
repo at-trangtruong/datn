@@ -1,0 +1,13 @@
+<tr>
+  <td><%= menu_counter %></td>
+  <td><%= menu.name %></td>
+  <td><%= menu.restaurant.name %></td>
+  <td>
+    <img src="<%= menu.picture %>" style="width: 70px;height: 70px;">
+  </td>
+  <td><%= menu.cost %></td>
+  <td>
+    <%= link_to "Sửa", edit_admin_menu_path(menu.id), method: :get %>
+    <%= link_to "Xóa", admin_menu_path(menu.id) , method: :delete, data: {confirm: "Are you sure ?"} %>
+  </td>
+</tr>

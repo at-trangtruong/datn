@@ -4,7 +4,7 @@
  <div style="float: right;">
   <%= link_to "Thêm Menu", new_menu_path, class: "btn btn-primary",style: "font-size: 13px;margin-left: 0px;margin-right: 10px;" %>
 </div>
-  <h2 style="text-align: center;">Menu</h2>
+  <h2 style="text-align: center;"><%= @restaurant.name %></h2>
   <div class="row">
     <table width=100%; id="myTable" class="table-hover table-striped" style="text-align: center;">
       <thead>
@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-        <%= render partial: 'menu_ad', collection: @restaurant.menus %>
+        <%= render partial: 'menu_ad', collection: @restaurant.menus.order(name: :asc) %>
       </tbody>
     </table>
   </div>

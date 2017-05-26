@@ -1,0 +1,16 @@
+<tr>
+  <td align="center">
+    <%= link_to rest.name, restaurant_path(rest.id)%>
+  </a>
+</td>
+<td align="center">
+  <%= rest.category.name %>
+</td>
+<td align="center"><%= rest.address %></td>
+<td align="center">
+  <%= link_to restaurant_path(rest.id), method: :get do %>
+  <img class="rest_img" src="<%= rest.picture %>" style="width: 200px; height: 100px;" />
+  <% end %>
+</td>
+</tr>
+<tr>

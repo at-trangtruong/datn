@@ -60,7 +60,7 @@
         <div class="row">
           <!--logo area-->
           <div class="col-md-3 col-sm-3 col-xs-4">
-            <div class="logo"><a href="/"><img style="height: 65px; width: 260px;" src="http://localhost:3000/assets/logo_edu.png" alt=""></a></div>
+            <div class="logo"><a href="/"><img style="height: 65px; width: 260px;" src="http://localhost:3000/assets/logo.jpg" alt=""></a></div>
           </div>
           <!--end logo area-->
           <!--nav area-->
@@ -69,9 +69,9 @@
             <nav class="menu">
               <ul class="navid">
                 <li class="current"><a href="http://localhost:3000/#home">Trang chủ</a></li>
-                <li class=""><a href="/#recommended">Gợi ý</a></li>
-                <li class=""><a href="/#place">Địa điểm</a></li>
-                <li class=""><a href="/#contact-me">Liên hệ</a></li>
+                <li class=""><a href="http://localhost:3000/#recommended">Gợi ý</a></li>
+                <li class=""><a href="http://localhost:3000/#place">Địa điểm</a></li>
+                <li class=""><a href="http://localhost:3000/#contact-me">Liên hệ</a></li>
                 <% if @current_user.blank? %>
                   <li class="">
                     <%= link_to "Đăng nhập", login_users_path %>
@@ -89,10 +89,10 @@
             <div class="dropdown mabile_menu">
               <a data-toggle="dropdown" class="mobile-menu" href="#"><span> MENU </span><i class="fa fa-bars"></i></a>
               <ul class="dropdown-menu mobile_menus drop_mobile navid">
-                <li class="current"><a href="/#home">Trang chủ</a></li>
-                <li class=""><a href="/#recommended">Gợi ý</a></li>
-                <li class=""><a href="/#place">Địa điểm</a></li>
-                <li class=""><a href="/#contact-me">Liên hệ</a></li>
+                <li class="current"><a href="http://localhost:3000/#home">Trang chủ</a></li>
+                <li class=""><a href="http://localhost:3000/#recommended">Gợi ý</a></li>
+                <li class=""><a href="http://localhost:3000/#place">Địa điểm</a></li>
+                <li class=""><a href="http://localhost:3000/#contact-me">Liên hệ</a></li>
                 <% if @current_user.blank? %>
                   <li class="">
                     <%= link_to "Đăng nhập", login_users_path %>
@@ -222,8 +222,8 @@
           </div>
         </div>
       </div>
-      <div class="footer_text">
-        <p>Copyright © 2017 <a href="https://www.facebook.com/vinaenter.edu">AM THUC DA THANH</a>.</p>
+      <div class="footer_text text-center">
+        <p><span style="color: #00bcd4;">Copyright © 2017</span> <a href="https://www.facebook.com/vinaenter.edu">AM THUC DA THANH</a>.</p>
       </div>
     </div>
     <script src="http://localhost:3000/assets/public/js/owl.carousel.min.js"></script>

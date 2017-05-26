@@ -1,0 +1,35 @@
+<div class="templatemo-content-container" style="padding: 10px;" >
+  <div class="templatemo-content-widget white-bg" style="padding: 10px;">
+    <div class="bottom-spacing">
+      <!-- Button -->
+      <div class="clear"></div>
+    </div>
+    <div class="float-left">
+      <%= link_to "Thêm Menu", new_admin_menu_path, class: "templatemo-white-button" %>
+    </div>
+    <h2 class="text-uppercase margin-bottom-10 text-center">Menu</h2>
+    <div class="table-responsive">
+    <%= render partial: 'shared/show_messages', locals: {flash: flash} %>
+      <table id="myTable" class="table-hover table-bordered table-striped" style="text-align: center;">
+        <thead>
+          <tr class="text-center">
+            <th width="5%">#</th>
+            <th width="20%">Tên món</th>
+            <th width="20%">Nhà hàng</th>
+            <th width="20%">Hình ảnh</th>
+            <th width="20%">Giá</th>
+            <th width="10%">Chức năng</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%= render partial: 'menu', collection: @menus %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('#myTable').DataTable();
+    });
+  </script>
+

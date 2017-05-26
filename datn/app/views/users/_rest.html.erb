@@ -3,14 +3,14 @@
   <td><%= rest.category.name %></td>
   <td><%= rest.address %></td>
   <td>
-    <% if rest.status == "1" %>
+    <% if rest.status == 1 %>
       <img src="/assets/tick-circle.gif" alt="" />
     <% else %>
       <img src="/assets/minus-circle.gif" alt="" />
     <% end %>
   </td>
   <td>
-    <% if rest.highlight == "1" %>
+    <% if rest.highlight == 1 %>
       <img src="/assets/tick-circle.gif" alt="" />
     <% else %>
       <img src="/assets/minus-circle.gif" alt="" />

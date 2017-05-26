@@ -5,6 +5,6 @@
   </td>
   <td align="center" width="30%">
     <%= link_to "Sửa", edit_admin_category_path(cat.id)%>
-    <%= link_to "Xóa", admin_category_path(cat.id), method: :delete, data: {confirm: "Are you sure ?"} %>
+    <%= link_to "Xóa", admin_category_path(cat.id), method: :delete, data: {confirm: "Nếu như bạn xóa danh mục này, các địa điểm thuộc danh mục sẽ được chuyển về none. Bạn vẫn muốn xóa danh mục"} %>
   </td>
 </tr>

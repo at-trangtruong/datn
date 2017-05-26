@@ -109,7 +109,7 @@
                <%= link_to "Trang chủ", admin_home_index_path %>
               </li>
               <li>
-              <a href="/DACSHTTT/admin/sua-member?uid=1">Tài khoản</a>
+                <%= link_to "Sửa", edit_admin_user_path(@current_user.id), method: :get %>
               </li>
               <li>
                 <%= link_to "Đăng xuất", logout_admin_users_path %>

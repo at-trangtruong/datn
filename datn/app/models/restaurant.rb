@@ -5,7 +5,8 @@ class Restaurant < ApplicationRecord
   belongs_to :category
   belongs_to :user
   belongs_to :district
-  has_many :menus
+  has_many :menus, dependent: :destroy
+  has_many :rates, dependent: :destroy
 
   delegate :name, :id, to: :category, prefix: :cat
   delegate :name, :id, to: :district, prefix: :district

@@ -1,12 +1,16 @@
-<div class="templatemo-content-container">
-  <div class="templatemo-content-widget white-bg">
+<div class="templatemo-content-container" style="padding: 10px;" >
+  <div class="templatemo-content-widget white-bg" style="padding: 10px;">
     <div class="bottom-spacing">
       <!-- Button -->
       <div class="clear"></div>
     </div>
+    <div class="float-left">
+      <%= link_to "Thêm địa điểm", new_admin_restaurant_path, class: "templatemo-white-button" %>
+    </div>
     <h2 class="text-uppercase margin-bottom-10 text-center">Nhà Hàng</h2>
     <div class="table-responsive">
-      <table id="myTable" class="table-hover table-bordered table-striped">
+    <%= render partial: 'shared/show_messages', locals: {flash: flash} %>
+      <table id="myTable" class="table-hover table-bordered table-striped" style="text-align: center;">
         <thead>
           <tr class="text-center">
             <th width="5%">#</th>

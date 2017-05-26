@@ -1,8 +1,40 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < Admin::BasesController
+  skip_before_action :verify_authenticity_token
+  skip_before_action :check_login, only: [:login, :signin]
+
+  layout "admin_layout"
+  def index
+    @users = User.where role: 0
+  end
 
   def login
     @user = User.new
     render layout: false
+  end
+
+  def new
+    @user = User.new
+  end
+
+  def edit
+    get_user
+  end
+
+  def update
+    get_user
+    check_user_params
+    if !check_user_params
+      flash[:danger] = "Password không trùng khớp"
+      redirect_to :back
+    else
+      if @user.update check_user_params
+        flash[:success] = "Sửa thành công"
+        redirect_to admin_users_path
+      else
+        flash[:danger] = "Sửa thất bại"
+        redirect_to :back
+      end
+    end
   end
 
   def signin
@@ -19,6 +51,17 @@ class Admin::UsersController < ApplicationController
   def logout
     log_out
     redirect_to root_path
+  end
+
+  def destroy
+    get_user
+    if @user.destroy
+      flash[:success] = "Xóa thành công"
+      redirect_to admin_users_path
+    else
+      flash[:danger] = "Xóa thất bại"
+      redirect_to :back
+    end
   end
   private
   def user_params

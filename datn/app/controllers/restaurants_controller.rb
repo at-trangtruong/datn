@@ -56,7 +56,7 @@ class RestaurantsController < ApplicationController
     get_restaurant
     if @restaurant.destroy
       flash[:success] = "Xóa thành công"
-      redirect_to user_path(@current_user.id)
+      redirect_to restaurants_user_path(@current_user.id)
     else
       flash[:danger] = "Xóa thất bại"
       redirect_to :back

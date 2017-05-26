@@ -1,6 +1,7 @@
-       
+<% unless category.check_rest @restaurants %>
 <li class="filter" data-filter=".danhmuc<%= category.id %>">
-  <%= category.name %>                       
-    <i class="fa fa-play-circle" aria-hidden="true" style="font-size: 20px; line-height: 20px;"></i>
-  </a>
+  <%= category.name %>
+  <i class="fa fa-play-circle" aria-hidden="true" style="font-size: 20px; line-height: 20px;"></i>
+</a>
 </li>
+<% end %>
